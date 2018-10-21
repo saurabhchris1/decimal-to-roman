@@ -64,11 +64,13 @@ CptS 481, Fall 2018 2
  ```
  
 **Within the module, instantiate all roman numerals up to and including 1000 (i.e. M) as objects so that this (for instance) works:**
+
      ```
      >>> from roman import *
      >>> III*XI + CM*II
      Roman(1833)
      ```
+     
 **There’s an easy way to do this (hint: globals()) and a hard way. Credit will not be given for the hard way.
 [ +10 pts. extra credit ] Make the constructor Roman() also accept a legal roman numeral (as a str) and convert it for use internally. (Any illegal roman numeral string should raise an exception of your own design.) Also make this the default display format for the __repr__() method. This would make the line in the above example:**
 ```
