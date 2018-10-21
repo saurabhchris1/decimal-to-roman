@@ -3,7 +3,7 @@ This homework will test your ability to make use of Python’s objects and magic
 Reminder: This assignment is to be your own work. You are not to “borrow” code from any source apart from the textbook.
 **1. [ 100 points ] Implement a class Roman in a module roman.py that adds Roman numeral functionality to Python. The basic digits are:**
 
-numeral      decimal equivalent 
+**numeral      decimal equivalent**
 
     I            1 
     V            5    
@@ -25,9 +25,16 @@ numeral      decimal equivalent
     (D)            500000
     (M)            1000000
   
- There are specific rules for how to turn any positive integer up to several million into roman numerals. For example, 37 is XXXVII and 99 is XCIX. If you don’t remember these rules, the Wikipedia article “Roman Numerals” is a good review.
+**There are specific rules for how to turn any positive integer up to several million into roman numerals. For example, 37 is XXXVII and 99 is XCIX. If you don’t remember these rules, the Wikipedia article “Roman Numerals” is a good review.**
+
 Roman should implement the following operations:
-x+y x-y x*y x/y x//y x**y x==y x!=y x<y x<=y x>=y x>y -x
+
+   ``` x+y     x-y     x*y 
+    x/y     x//y    x**y 
+    x==y    x!=y    x<y 
+    x<=y    x>=y    x>y 
+    -x ```
+    
 Observe these additional constraints:
 • The result of any unary arithmetic operation involving a Roman should be a Roman.
 • The result of any binary arithmetic operation involving a Roman and an int should be a Roman.
