@@ -33,19 +33,23 @@ Roman should implement the following operations:
     x/y     x//y    x**y 
     x==y    x!=y    x<y 
     x<=y    x>=y    x>y 
-    -x ```
+    -x 
+  ```
     
-Observe these additional constraints:
-• The result of any unary arithmetic operation involving a Roman should be a Roman.
-• The result of any binary arithmetic operation involving a Roman and an int should be a Roman.
-CptS 481, Fall 2018 2 • (Comparison operations still result in bools, of course.)
-• Roman mathematicians did not have negative numbers, but Roman will indicate negative values with a - prefix.
-• Roman mathematicians did not have a zero, but Roman will use ’N’ to stand for nulla (“nothing”). Note that N is never a placeholder: It is only used to indicate a value of 0.
-• Floor (“//”) division returns a Roman, ignoring the remainder (as it should).
-• True (“/”) division returns a tuple of two Romans “(quotient, remainder )”.
-• Reuse magic methods wherever possible. E.g., __radd__() should call __add__()
-• Values that are too big in absolute value to represent (let’s make it 2000000 or more for convenience), should raise a ValueError exception.
-• Roman() should accept a mandatory int argument. Here is an interactive example of the working module:
+    
+**Observe these additional constraints:
+- The result of any unary arithmetic operation involving a Roman should be a Roman.
+- The result of any binary arithmetic operation involving a Roman and an int should be a Roman.
+CptS 481, Fall 2018 2 
+- (Comparison operations still result in bools, of course.)
+- Roman mathematicians did not have negative numbers, but Roman will indicate negative values with a - prefix.
+- Roman mathematicians did not have a zero, but Roman will use ’N’ to stand for nulla (“nothing”). Note that N is never a placeholder: It is only used to indicate a value of 0.
+- Floor (“//”) division returns a Roman, ignoring the remainder (as it should).
+- True (“/”) division returns a tuple of two Romans “(quotient, remainder )”.
+- Reuse magic methods wherever possible. E.g., __radd__() should call __add__()
+- Values that are too big in absolute value to represent (let’s make it 2000000 or more for convenience), should raise a ValueError exception.
+- Roman() should accept a mandatory int argument. Here is an interactive example of the working module:**
+```
      >>> from roman import Roman
      >>> III = Roman(3)
      >>> VII = Roman(7)
@@ -57,11 +61,17 @@ CptS 481, Fall 2018 2 • (Comparison operations still result in bools, of cours
      X
      >>> print(VII + 2)
      IX
-Within the module, instantiate all roman numerals up to and including 1000 (i.e. M) as objects so that this (for instance) works:
+ ```
+ 
+**Within the module, instantiate all roman numerals up to and including 1000 (i.e. M) as objects so that this (for instance) works:**
+     ```
      >>> from roman import *
      >>> III*XI + CM*II
      Roman(1833)
-There’s an easy way to do this (hint: globals()) and a hard way. Credit will not be given for the hard way.
-[ +10 pts. extra credit ] Make the constructor Roman() also accept a legal roman numeral (as a str) and convert it for use internally. (Any illegal roman numeral string should raise an exception of your own design.) Also make this the default display format for the __repr__() method. This would make the line in the above example:
+     ```
+**There’s an easy way to do this (hint: globals()) and a hard way. Credit will not be given for the hard way.
+[ +10 pts. extra credit ] Make the constructor Roman() also accept a legal roman numeral (as a str) and convert it for use internally. (Any illegal roman numeral string should raise an exception of your own design.) Also make this the default display format for the __repr__() method. This would make the line in the above example:**
+```
      >>> III + VII
      Roman(’X’)
+```
