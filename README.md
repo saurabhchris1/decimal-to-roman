@@ -77,3 +77,104 @@ CptS 481, Fall 2018 2
      >>> III + VII
      Roman(’X’)
 ```
+
+Evaluation:
+
+Homework #03 Evaluation: Saurabh Jaiswal
+
+
+
+Test Results:
+
+1. Roman(int) Comparison
+------------------------
+
+Roman(int)      str() result               expected                   okay?  repr() result                       
+--------------  -------------------------  -------------------------  -----  ----------------------------------  
+Roman(0)        N                          N                          yes    Roman('N')                          
+Roman(1)        I                          I                          yes    Roman('I')                          
+Roman(5)        V                          V                          yes    Roman('V')                          
+Roman(9)        IX                         IX                         yes    Roman('IX')                         
+Roman(10)       X                          X                          yes    Roman('X')                          
+Roman(14)       XIV                        XIV                        yes    Roman('XIV')                        
+Roman(50)       L                          L                          yes    Roman('L')                          
+Roman(100)      C                          C                          yes    Roman('C')                          
+Roman(500)      D                          D                          yes    Roman('D')                          
+Roman(1000)     M                          M                          yes    Roman('M')                          
+Roman(2037)     MMXXXVII                   MMXXXVII                   yes    Roman('MMXXXVII')                   
+Roman(5000)     (V)                        (V)                        yes    Roman('(V)')                        
+Roman(10000)    (X)                        (X)                        yes    Roman('(X)')                        
+Roman(50000)    (L)                        (L)                        yes    Roman('(L)')                        
+Roman(100000)   (C)                        (C)                        yes    Roman('(C)')                        
+Roman(300157)   (C)(C)(C)CLVII             (C)(C)(C)CLVII             yes    Roman('(C)(C)(C)CLVII')             
+Roman(500000)   (D)                        (D)                        yes    Roman('(D)')                        
+Roman(1000000)  (M)                        (M)                        yes    Roman('(M)')                        
+Roman(1999999)  (M)(C)(M)(X)(C)M(X)CMXCIX  (M)(C)(M)(X)(C)M(X)CMXCIX  yes    Roman('(M)(C)(M)(X)(C)M(X)CMXCIX')  
+
+
+2. Built-In Values
+------------------
+
+symbol  got    okay?  
+------  -----  -----  
+I       I      yes    
+XII     XII    yes    
+CXIII   CXIII  yes    
+DLIV    DLIV   yes    
+
+
+3. Expressions
+--------------
+
+expression             non-Roman result    got                            okay?                   
+---------------------  ------------------  -----------------------------  ----------------------  
+Roman(98) + Roman(3)   101                 CI                             (determined by grader)  
+Roman(98) + 3          101                 CI                             (determined by grader)  
+98 + Roman(3)          101                 (TypeError raised)             no                      
+Roman(98) - Roman(3)   95                  XCV                            (determined by grader)  
+Roman(98) - 3          95                  XCV                            (determined by grader)  
+98 - Roman(3)          95                  (TypeError raised)             no                      
+Roman(98) * Roman(3)   294                 CCXCIV                         (determined by grader)  
+Roman(98) * 3          294                 CCXCIV                         (determined by grader)  
+98 * Roman(3)          294                 (TypeError raised)             no                      
+Roman(98) / Roman(3)   32.666666666666664  (Roman('XXXII'), Roman('II'))  (determined by grader)  
+Roman(98) / 3          32.666666666666664  (Roman('XXXII'), Roman('II'))  (determined by grader)  
+98 / Roman(3)          32.666666666666664  (TypeError raised)             no                      
+Roman(98) // Roman(3)  32                  XXXII                          (determined by grader)  
+Roman(98) // 3         32                  XXXII                          (determined by grader)  
+98 // Roman(3)         32                  (TypeError raised)             no                      
+Roman(98) ** Roman(3)  941192              (C)(M)(X)(L)MCXCII             (determined by grader)  
+Roman(98) ** 3         941192              (C)(M)(X)(L)MCXCII             (determined by grader)  
+98 ** Roman(3)         941192              (TypeError raised)             no                      
+Roman(98) == Roman(3)  False               False                          yes                     
+Roman(98) == 3         False               False                          yes                     
+98 == Roman(3)         False               False                          yes                     
+Roman(98) != Roman(3)  True                True                           yes                     
+Roman(98) != 3         True                True                           yes                     
+98 != Roman(3)         True                True                           yes                     
+Roman(98) < Roman(3)   False               False                          yes                     
+Roman(98) < 3          False               False                          yes                     
+98 < Roman(3)          False               False                          yes                     
+Roman(98) <= Roman(3)  False               False                          yes                     
+Roman(98) <= 3         False               False                          yes                     
+98 <= Roman(3)         False               False                          yes                     
+Roman(98) >= Roman(3)  True                True                           yes                     
+Roman(98) >= 3         True                True                           yes                     
+98 >= Roman(3)         True                True                           yes                     
+Roman(98) > Roman(3)   True                True                           yes                     
+Roman(98) > 3          True                True                           yes                     
+98 > Roman(3)          True                True                           yes                     
+-Roman(98)             -98                 -XCVIII                        (determined by grader)  
+
+
+4. Extra Credit
+---------------
+
+Roman(str)      got             okay?  
+--------------  --------------  -----  
+Roman('I')      Roman('I')      yes    
+Roman('XII')    Roman('XII')    yes    
+Roman('CXIII')  Roman('CXIII')  yes    
+Roman('DLIV')   Roman('DLIV')   yes    
+
+
