@@ -113,9 +113,11 @@ Roman(1999999)  (M)(C)(M)(X)(C)M(X)CMXCIX  (M)(C)(M)(X)(C)M(X)CMXCIX  yes    Rom
 
 ```
 
+
 2. Built-In Values
 ------------------
 
+```
 symbol  got    okay?  
 ------  -----  -----  
 I       I      yes    
@@ -123,10 +125,13 @@ XII     XII    yes
 CXIII   CXIII  yes    
 DLIV    DLIV   yes    
 
+```
+
 
 3. Expressions
 --------------
 
+```
 expression             non-Roman result    got                            okay?                   
 ---------------------  ------------------  -----------------------------  ----------------------  
 Roman(98) + Roman(3)   101                 CI                             (determined by grader)  
@@ -167,10 +172,12 @@ Roman(98) > 3          True                True                           yes
 98 > Roman(3)          True                True                           yes                     
 -Roman(98)             -98                 -XCVIII                        (determined by grader)  
 
+```
 
 4. Extra Credit
 ---------------
 
+```
 Roman(str)      got             okay?  
 --------------  --------------  -----  
 Roman('I')      Roman('I')      yes    
@@ -178,4 +185,4 @@ Roman('XII')    Roman('XII')    yes
 Roman('CXIII')  Roman('CXIII')  yes    
 Roman('DLIV')   Roman('DLIV')   yes    
 
-
+```
